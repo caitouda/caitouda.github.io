@@ -4,6 +4,10 @@
 	width: 960px;
 }
 
+.container .logo-icon {
+	width: 70px;
+	height: 40px;
+}
 
 /* Header */
 
@@ -110,7 +114,7 @@
 
 .slide-feature {
 	text-align: center;
-	background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ac.png');
+	background-image: url(../img/TaiwanLanscape.jpg);
 	height: 470px;
 }
 

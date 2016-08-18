@@ -7,7 +7,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
 		<title>注册——台湾留学信息网</title>
-		<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
 		<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
