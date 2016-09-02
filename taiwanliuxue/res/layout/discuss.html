@@ -3,9 +3,9 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
-		<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/discussstyle.css" rel="stylesheet">
+		<title>陆生留言讨论</title>
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="./css/discussstyle.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -27,6 +27,9 @@
 		<div>
 			<a href="./add_article.html">写文章</a>
 		</div>
+		<div>
+			<a href="./update_article.html">修改文章</a>
+		</div>
 		<?php
             if (!empty($d['article'])) {
                 echo '<ul>';
@@ -39,8 +42,8 @@
             }
         ?>
 
-			<script src="../../../js/jquery-3.1.0.js"></script>
-			<script src="js/discussapp.js"></script>
+			<script src="../js/jquery-3.1.0.js"></script>
+			<script src="./js/discussapp.js"></script>
 
 	</body>
 
