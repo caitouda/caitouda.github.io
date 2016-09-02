@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title><?=$d['article']['Title']?></title>
+		<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/discussstyle.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<h1><?=$d['article']['Title']?></h1>
+        <div>作者：<?=$<?=$d['article']['Author']?></div>
+        <div><?=nl2br($a<?=$d['article']['Content']?>) ?>
+        </div>
+	</body>
+
+</html>
