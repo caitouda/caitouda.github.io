@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../css/discussstyle.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<h1>用户编号：<?=$d['coment']['UserID']?></h1>
+		<div>昵称：
+			<?=$d['coment']['UserName']?>
+		</div>
+		<div>留言：
+			<?=nl2br($d['coment']['Content']) ?>
+		</div>
+		<div>时间：
+			<?=$d['coment']['Time']?>
+		</div>
+	</body>
+
+</html>
