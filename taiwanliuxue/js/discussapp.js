@@ -2,7 +2,7 @@ var main = function() {
 	$('.btn').click(function() {
 		var post = $('.status-box').val();
 		$('<li>').text(post).prependTo('.posts');
-		$('.status-box').val('');
+		// $('.status-box').val('');
 		$('.counter').text('140');
 		$('.btn').addClass('disabled');
 	});
@@ -12,9 +12,9 @@ var main = function() {
 		var charactersLeft = 140 - postLength;
 		$('.counter').text(charactersLeft);
 
-		if (charactersLeft < 0) {
+		if(charactersLeft < 0) {
 			$('.btn').addClass('disabled');
-		} else if (charactersLeft == 140) {
+		} else if(charactersLeft == 140) {
 			$('.btn').addClass('disabled');
 		} else {
 			$('.btn').removeClass('disabled');

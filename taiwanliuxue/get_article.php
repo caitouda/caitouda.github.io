@@ -5,8 +5,8 @@ $file = './article.json';
 if (file_exists($file)) {
 	$tmp = file_get_contents($file);
 	if (!empty($tmp)) {
-		$article = json_decode($tmp, true);
-		$article = $article[$ID - 1];
+		$articles = json_decode($tmp, true);
+		$article = $articles[$ID - 1];
 	}
 }
 

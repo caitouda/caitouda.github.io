@@ -10,40 +10,45 @@
 
 	<body>
 		<div class="container">
-			<form>
+			<form action="add_coment_submit.php" method="post">
+				<div>
+					<label for="userid">编号：</label>
+					<input type="text" name="userid" id="userid" />
+				</div>
+				<div>
+					<label for="username">昵称：</label>
+					<input type="text" name="username" id="username" />
+				</div>
 				<div class="form-group">
-					<textarea class="form-control status-box" rows="2" placeholder="What's on your mind?"></textarea>
+					<textarea class="form-control status-box" rows="2" placeholder="What's on your mind?" name="content" id="content"></textarea>
+				</div>
+				<div class="button-group pull-right">
+					<p class="counter">140</p>
+					<input type="submit" value="Post" class="btn btn-primary" />
 				</div>
 			</form>
-			<div class="button-group pull-right">
-				<p class="counter">140</p>
-				<a href="#" class="btn btn-primary">Post</a>
-			</div>
-
-			<ul class="posts">
-			</ul>
 		</div>
-		<h1>在线阅读</h1>
-		<div>
-			<a href="./add_article.html">写文章</a>
-		</div>
-		<div>
-			<a href="./update_article.html">修改文章</a>
-		</div>
-		<?php
-            if (!empty($d['article'])) {
-                echo '<ul>';
-                foreach ($d['article'] as $k=>$v) {
-                    $ID = $k + 1;
-                    echo '<li><a href="./get_article.php?ID=' . $ID . '">' . $v['Title'] . '</a>';
-                    echo '<p>' . mb_substr($v['Content'], 0, 100, 'UTF-8') . '……</p></li>';
+		<div class="test">
+			<center>
+				<h1>大家的留言</h1>
+			</center>
+			<?php
+            if (!empty($d['coments'])) {
+                echo '<ul class="posts">';
+                foreach ($d['coments'] as $k=>$v) {
+                    $ID = $v['ComentID'];
+                    echo '<li class="posts"><a href="./get_coment.php?ID=' . $ID . '">' . $v['ComentID'] . '</a>';
+                    echo '<p class="italic">' . mb_substr($v['UserName'], 0, 100, 'UTF-8') . '留言：</p>';
+                    echo '<p>' . mb_substr($v['Content'], 0, 100, 'UTF-8') . '</p>';
+                    echo '<p>' . mb_substr($v['Time'], 0, 100, 'UTF-8') . '</p></li>';
                 }
                 echo '</ul>';
             }
         ?>
+		</div>
 
-			<script src="../js/jquery-3.1.0.js"></script>
-			<script src="./js/discussapp.js"></script>
+		<script src="../js/jquery-3.1.0.js"></script>
+		<script src="./js/discussapp.js"></script>
 
 	</body>
 
